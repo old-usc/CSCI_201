@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+* {box-sizing: border-box;}
+	html, body {
+		margin: 0;
+		border: 0;
+		padding: 0;
+		background-color: rgb(81, 214, 156);
+		font-family: sans-serif;
+
+	}
+	#main-outer {
+		position: absolute;
+		background-color: rgb(52, 160, 237);
+    	height: 75%;
+		width: 100%;
+		margin-top: 6%;
+	}
+	#main-inner {
+		position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translateX(-50%) translateY(-50%);
+    	text-align: center;
+	}
+	#main-title {
+		margin: 0;
+		color: white;
+		font-size: 100px;
+		-webkit-text-stroke-width: 3px;
+		-webkit-text-stroke-color: black;
+		font-family: sans-serif;
+	}
+	search {
+		display: block;
+	}
+	#choice {
+		text-align: center;
+	}
+	#radio-table {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		width: 550px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	#search1 {
+		display: inline-block;
+		width: 500px;
+		height: 50px;
+		font-size: 20px;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 6px;
+		border: 1px solid white;
+	}
+	#icon {
+		float: right;
+		height: 50px;
+		width: 50px;
+		border-radius: 0;
+		margin-left: -4px;
+		padding: 6px 10px;
+		font-size: 30px;
+		background-color: white;
+		border: 1px solid white;
+	}
+	#error {
+		color: red;
+		font-weight: bold;
+	}
+
+</style>
+</head>
+<body>
+	<form name="myform" method="GET" action="Validation" onsubmit="return validate();">
+		<div id="main-outer">
+		<div id="main-inner">
+			<h2 id="main-title">LibraMate</h2>
+			<div id="search">
+				<input type="text" name="search" id="search1" placeholder="Search"/>
+				<button id="icon"><i class="fas fa-search"></i></button> <br>
+			</div>
+			<span id="error">Please Enter a Search Value.</span>
+			<div id="choice">
+				<table id="radio-table">
+					<tr>
+						<td><input type="radio" name="choices" class="choices" value="intitle" checked/>
+						<label for="choices1">Title</label></td>
+						<td><input type="radio" name="choices" class="choices" value="isbn"/>
+						<label for="choices2">ISBN</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="choices" class="choices" value="inauthor"/>
+						<label for="choices3">Author</label></td>
+						<td><input type="radio" name="choices" class="choices" value="subject"/>
+						<label for="choices4">Genre</label></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</div>
+	</form>
+</body>
+</html>
